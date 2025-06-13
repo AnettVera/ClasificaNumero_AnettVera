@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body style="justify-content: center; padding:10px auto;">
+    <H1>Clasificar numeros</H1>
+    <label>Numero</label>
+    <input type="number" id="numero" placeholder="Ingrese un número">
+    <button onclick="par_impar()">Par o impar</button>
+    <button onclick="pos_neg_cer()">Positivo Negativo o Cer</button>
+    <button onclick="mult_cinco()">Multiplo de cinco</button>
+    <button onclick="tres_cuatro()">Divisible entre 3 y 4</button>
+
+<script>
+function par_impar() {
+    let numero = document.getElementById("numero").value;
+    if (numero % 2 === 0) {
+        alert("El número es par");
+    } else {
+        alert("El número es impar");
+    }
+}
+function pos_neg_cer() {
+    let numero = document.getElementById("numero").value;
+   if( numero >0){
+        alert("El número es positivo");
+    } else if (numero < 0){
+        alert("El número es negativo");
+    }else{
+        alert("El numero es cero")
+    }
+}
+function mult_cinco() {
+    let numero = document.getElementById("numero").value;
+    if (numero % 5 === 0) {
+        alert("El número si es un multiplo de 5");
+    } else {
+        alert("El número no es un multiplo de 5");
+    }
+}
+
+function tres_cuatro(){
+     let numero = document.getElementById("numero").value;
+     if (numero % 3 === 0 && numero % 4 === 0){
+        alert ("El numero si es divisible entre 3 y 4 al mismo tiempo")
+     }else{
+        alert ("El numero no es divisible entre 3 y 4 al mismo tiempo")
+     }
+}
+
+
+</script>    
+</body>
+</html>
